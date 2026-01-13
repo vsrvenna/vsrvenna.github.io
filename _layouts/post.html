@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="post-container">
+    <a href="{{ '/posts' | relative_url }}" class="back-link">← Back to Posts</a>
+
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.reading_time %}
+        <span> • {{ page.reading_time }} min read</span>
+      {% endif %}
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <div class="post-footer">
+      <p>
+        Have questions or suggestions? Feel free to reach out at
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        or connect on
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+      </p>
+    </div>
+  </div>
+</article>

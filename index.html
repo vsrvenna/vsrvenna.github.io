@@ -1,0 +1,79 @@
+---
+layout: home
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>Hi, I'm Vidya Sagar</h1>
+    <p class="subtitle">MS Student in Electrical & Computer Engineering at USC</p>
+    <p class="intro">
+      I work at the intersection of machine learning, neurotechnology, and biosignal processing. Currently researching neural decoding and EMG signal processing at USC's COOR Lab and Information Sciences Institute.
+    </p>
+    <div class="links">
+      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <a href="mailto:{{ site.author.email }}">Email</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Research Interests</h2>
+
+    <div class="interest">
+      <h3>🧠 Neural Decoding</h3>
+      <p>State-space models and Kalman filters for motor cortex signal decoding</p>
+    </div>
+
+    <div class="interest">
+      <h3>💪 Biosignal Processing</h3>
+      <p>EMG signal analysis and automated onset detection for clinical applications</p>
+    </div>
+
+    <div class="interest">
+      <h3>🤖 Machine Learning</h3>
+      <p>Deep learning, transformers, and retrieval-augmented generation systems</p>
+    </div>
+
+    <div class="interest">
+      <h3>🔬 Research Automation</h3>
+      <p>LLM-based tools for scientific paper analysis and knowledge synthesis</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Recent Work</h2>
+
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        <div class="project">
+          <h3>{{ project.title }}</h3>
+          <p class="meta">{{ project.institution }} | {{ project.date }}</p>
+          <p>{{ project.description }}</p>
+          <div class="tags">
+            {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section recent-posts">
+  <div class="container">
+    <h2>Recent Posts</h2>
+
+    {% for post in site.posts limit:3 %}
+      <div class="post-item">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="date">{{ post.date | date: "%B %-d, %Y" }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+- role: "Graduate Student Researcher"
+  organization: "USC COOR Lab"
+  period: "July 2025 - Present"
+  description: "Working on an NIH-funded rotator cuff tendinopathy study. Built an automated EMG onset detection system that processes 100+ hours of patient data, reducing manual annotation time by ~90%."
+
+- role: "Machine Learning Researcher"
+  organization: "USC Information Sciences Institute"
+  period: "Sep 2025 - Present"
+  description: "Developing Project Alexandria, an LLM-based research automation system. Building RAG and reasoning agents that parse 1,000+ scientific papers 3× faster than manual review."
+
+- role: "Machine Learning Intern"
+  organization: "BrainSightAI"
+  period: "Jan 2024 - Jun 2024"
+  description: "Designed BIDS-compliant MRI preprocessing pipelines for 250+ patient scans. Reduced reconstruction error by 15% and processing time by 20% through algorithm optimization."
+
+- role: "Honours Student Researcher"
+  organization: "IIIT Sri City - Human Movement Analysis Lab"
+  period: "May 2022 - May 2024"
+  description: "Led creation of three open-source sEMG datasets (EMAHA-DB4/5/7) across 30+ subjects. Developed transformer-based transfer learning framework achieving 71% cross-dataset accuracy."

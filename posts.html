@@ -1,0 +1,20 @@
+---
+layout: default
+title: Posts
+---
+
+<div class="posts-list">
+  <div class="container">
+    <h1>Posts</h1>
+
+    {% for post in site.posts %}
+      <div class="post-item">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        {% if post.excerpt %}
+          <p class="excerpt">{{ post.excerpt }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

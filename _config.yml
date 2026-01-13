@@ -1,0 +1,54 @@
+# Site settings
+title: "Vidya Sagar Reddy Venna"
+description: "MS Student in ECE at USC | ML & Neurotechnology Researcher"
+url: "https://vsrvenna.github.io"
+baseurl: ""
+
+# Author info
+author:
+  name: "Vidya Sagar Reddy Venna"
+  email: "vvenna@usc.edu"
+  github: "vsrvenna"
+  linkedin: "vidyasagarvenna"
+  scholar: "2zX94O4AAAAJ"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+timezone: America/Los_Angeles
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - BLOG-TEMPLATE.md
+  - vendor/
+  - .gitignore
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
